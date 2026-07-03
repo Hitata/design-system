@@ -1,0 +1,33 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="UI roles" subtitle="Same colors mapped to roles, with on-color text" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--bg); font-family: var(--font-mono); }
+  .wrap { padding: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: var(--border-hair) solid var(--ink); margin: 20px; }
+  .role { padding: 16px 14px; border-right: var(--border-hair) solid var(--ink); }
+  .role:last-child { border-right: none; }
+  .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.85; }
+  .nm { font-family: var(--font-sans); font-weight: 800; font-size: 18px; margin-top: 6px; }
+  .hx { font-size: 10px; margin-top: 10px; opacity: 0.7; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="role" style="background:var(--primary); color:var(--on-primary)">
+      <div class="lbl">Primary / CTA</div><div class="nm">Ember</div><div class="hx">#A0522D</div>
+    </div>
+    <div class="role" style="background:var(--secondary); color:var(--on-secondary)">
+      <div class="lbl">Secondary</div><div class="nm">Ink slate</div><div class="hx">#28323B</div>
+    </div>
+    <div class="role" style="background:var(--success); color:var(--on-success)">
+      <div class="lbl">Success</div><div class="nm">Moss</div><div class="hx">#6B7A5A</div>
+    </div>
+    <div class="role" style="background:var(--premium); color:var(--on-premium)">
+      <div class="lbl">Premium</div><div class="nm">Brass</div><div class="hx">#9A8557</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,316 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/core/**",
+              "ui_kits/darsana/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Be Vietnam Pro|Newsreader|Space Mono))/i]",
+        "message": "Font not provided by the design system. Available: Be Vietnam Pro, Newsreader, Space Mono."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|solid|dot|children|key|ref|className|style|children)$/]",
+        "message": "<Badge> doesn't accept that prop. Declared props: tone, solid, dot, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:neutral|primary|success|premium|ink)$/]",
+        "message": "<Badge> tone must be one of 'neutral' | 'primary' | 'success' | 'premium' | 'ink'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|size|disabled|full|startIcon|endIcon|children|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: variant, size, disabled, full, startIcon, endIcon, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|secondary|ghost|link)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'secondary' | 'ghost' | 'link'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:sm|md|lg)$/]",
+        "message": "<Button> size must be one of 'sm' | 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Callout'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|title|children|key|ref|className|style|children)$/]",
+        "message": "<Callout> doesn't accept that prop. Declared props: tone, title, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Callout'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:primary|success|ink|premium|neutral)$/]",
+        "message": "<Callout> tone must be one of 'primary' | 'success' | 'ink' | 'premium' | 'neutral'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:surface|frame|texture|rivets|eyebrow|title|children|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: surface, frame, texture, rivets, eyebrow, title, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute[name.name='surface'] > Literal[value!=/^(?:paper|cement|plaster|ink)$/]",
+        "message": "<Card> surface must be one of 'paper' | 'cement' | 'plaster' | 'ink'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute[name.name='frame'] > Literal[value!=/^(?:none|hair|thick|block)$/]",
+        "message": "<Card> frame must be one of 'none' | 'hair' | 'thick' | 'block'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute[name.name='texture'] > Literal[value!=/^(?:none|rivet|grid|mesh|conduit|distress)$/]",
+        "message": "<Card> texture must be one of 'none' | 'rivet' | 'grid' | 'mesh' | 'conduit' | 'distress'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Input'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|hint|error|prefix|key|ref|className|style|children)$/]",
+        "message": "<Input> doesn't accept that prop. Declared props: label, hint, error, prefix."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Switch'] > JSXAttribute > JSXIdentifier[name!=/^(?:checked|defaultChecked|onChange|disabled|label|id|key|ref|className|style|children)$/]",
+        "message": "<Switch> doesn't accept that prop. Declared props: checked, defaultChecked, onChange, disabled, label, id."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Badge": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "Callout": {
+        "replaces": []
+      },
+      "Card": {
+        "replaces": []
+      },
+      "Input": {
+        "replaces": []
+      },
+      "Switch": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--bg",
+      "--bolt-size",
+      "--border",
+      "--border-hair",
+      "--border-heavy",
+      "--border-style",
+      "--border-thick",
+      "--brass",
+      "--cement",
+      "--cement-text",
+      "--container",
+      "--container-wide",
+      "--ember",
+      "--ember-deep",
+      "--focus",
+      "--font-display",
+      "--font-mono",
+      "--font-sans",
+      "--font-serif",
+      "--gutter",
+      "--ink",
+      "--ink-slate",
+      "--leading-normal",
+      "--leading-relaxed",
+      "--leading-snug",
+      "--leading-tight",
+      "--link",
+      "--mat-brick",
+      "--mat-concrete",
+      "--mat-copper",
+      "--mat-iron",
+      "--mat-teal",
+      "--mat-wood",
+      "--moss",
+      "--on-premium",
+      "--on-primary",
+      "--on-secondary",
+      "--on-success",
+      "--paper",
+      "--plaster",
+      "--premium",
+      "--primary",
+      "--primary-hover",
+      "--radius-none",
+      "--radius-pill",
+      "--radius-sm",
+      "--secondary",
+      "--shadow-block",
+      "--shadow-none",
+      "--space-0",
+      "--space-1",
+      "--space-10",
+      "--space-12",
+      "--space-16",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-8",
+      "--success",
+      "--surface",
+      "--surface-warm",
+      "--tex-conduit",
+      "--tex-distress",
+      "--tex-grid",
+      "--tex-mesh",
+      "--tex-rivet",
+      "--tex-rivet-size",
+      "--text",
+      "--text-2xl",
+      "--text-3xl",
+      "--text-4xl",
+      "--text-5xl",
+      "--text-base",
+      "--text-lg",
+      "--text-md",
+      "--text-muted",
+      "--text-sm",
+      "--text-xl",
+      "--text-xs",
+      "--tracking-normal",
+      "--tracking-tight",
+      "--tracking-wide",
+      "--tracking-wider",
+      "--weight-black",
+      "--weight-bold",
+      "--weight-medium",
+      "--weight-regular",
+      "--weight-semibold"
+    ],
+    "tokenKinds": {
+      "--paper": "color",
+      "--plaster": "color",
+      "--cement": "color",
+      "--cement-text": "font",
+      "--ink": "color",
+      "--ember": "color",
+      "--ember-deep": "color",
+      "--ink-slate": "color",
+      "--moss": "color",
+      "--brass": "color",
+      "--bg": "color",
+      "--surface": "color",
+      "--surface-warm": "color",
+      "--text": "font",
+      "--text-muted": "font",
+      "--border": "color",
+      "--primary": "color",
+      "--primary-hover": "color",
+      "--on-primary": "color",
+      "--secondary": "color",
+      "--on-secondary": "color",
+      "--link": "color",
+      "--success": "color",
+      "--on-success": "color",
+      "--premium": "color",
+      "--on-premium": "color",
+      "--focus": "color",
+      "--mat-brick": "color",
+      "--mat-concrete": "color",
+      "--mat-iron": "color",
+      "--mat-wood": "color",
+      "--mat-copper": "color",
+      "--mat-teal": "color",
+      "--font-display": "font",
+      "--font-sans": "font",
+      "--font-serif": "font",
+      "--font-mono": "font",
+      "--weight-regular": "font",
+      "--weight-medium": "font",
+      "--weight-semibold": "font",
+      "--weight-bold": "font",
+      "--weight-black": "font",
+      "--text-xs": "font",
+      "--text-sm": "font",
+      "--text-base": "font",
+      "--text-md": "font",
+      "--text-lg": "font",
+      "--text-xl": "font",
+      "--text-2xl": "font",
+      "--text-3xl": "font",
+      "--text-4xl": "font",
+      "--text-5xl": "font",
+      "--leading-tight": "font",
+      "--leading-snug": "font",
+      "--leading-normal": "font",
+      "--leading-relaxed": "font",
+      "--tracking-tight": "font",
+      "--tracking-normal": "font",
+      "--tracking-wide": "font",
+      "--tracking-wider": "font",
+      "--space-0": "spacing",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-8": "spacing",
+      "--space-10": "spacing",
+      "--space-12": "spacing",
+      "--space-16": "spacing",
+      "--border-hair": "spacing",
+      "--border-thick": "spacing",
+      "--border-heavy": "spacing",
+      "--border-style": "other",
+      "--radius-none": "radius",
+      "--radius-sm": "radius",
+      "--radius-pill": "radius",
+      "--shadow-none": "shadow",
+      "--shadow-block": "shadow",
+      "--container": "spacing",
+      "--container-wide": "spacing",
+      "--gutter": "color",
+      "--tex-rivet": "color",
+      "--tex-rivet-size": "spacing",
+      "--tex-grid": "color",
+      "--tex-mesh": "color",
+      "--tex-conduit": "color",
+      "--tex-distress": "color",
+      "--bolt-size": "spacing"
+    },
+    "fontFamilies": [
+      "Be Vietnam Pro",
+      "Newsreader",
+      "Space Mono"
+    ]
+  }
+}

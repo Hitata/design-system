@@ -1,0 +1,83 @@
+/* ============================================================
+   COLOR — Đinh Hỏa system v1
+   ------------------------------------------------------------
+   Thesis: the cement/earth palette is the room (background,
+   structure); the ngũ hành elements are the sparks (text,
+   highlights, accents). Brutalism is the ground; the chart is
+   the light on it.
+
+   Base = Thổ (Earth/cement) · Primary = Đinh Hỏa (ember) ·
+   Secondary = Thủy (ink-slate) · Success = Mộc (moss) ·
+   Premium = Kim (brass).
+   ============================================================ */
+
+:root {
+  /* ---- Raw palette: Base — Thổ (the room) ---- */
+  --paper:        #E8E4DD;  /* off-white / paper */
+  --plaster:      #B8A992;  /* warm plaster panels */
+  --cement:       #8C8A85;  /* primary surface, dividers */
+  --cement-text:  #6B6862;  /* muted text-grey */
+  --ink:          #1F1F1F;  /* ink black (Thủy) — frames, structure */
+
+  /* ---- Raw palette: Sparks (the light) ---- */
+  --ember:        #A0522D;  /* Hỏa / Đinh — the one hero accent */
+  --ember-deep:   #8F4527;  /* Hỏa — hover / active / dark spark */
+  --ink-slate:    #28323B;  /* Thủy / Phá Quân — depth accent */
+  --moss:         #6B7A5A;  /* Mộc — success / organic / positive */
+  --brass:        #9A8557;  /* Kim — rare premium emphasis only */
+
+  /* ---- Semantic: base — Thổ ---- */
+  --bg:            var(--paper);     /* default canvas */
+  --surface:       var(--cement);    /* raised blocks, dividers */
+  --surface-warm:  var(--plaster);   /* feature / warm panels */
+  --text:          var(--ink);       /* primary body copy (Thủy) */
+  --text-muted:    var(--cement-text);
+  --border:        var(--ink);       /* hairline, exposed-structure rule */
+
+  /* ---- Semantic: roles (sparks) ---- */
+  --primary:        var(--ember);     /* Đinh Hỏa — brand + CTA */
+  --primary-hover:  var(--ember-deep);/* CTA hover / active */
+  --on-primary:     var(--paper);     /* text / icon on primary */
+  --secondary:      var(--ink-slate); /* Thủy — secondary CTA */
+  --on-secondary:   var(--paper);
+  --link:           var(--ember);     /* = primary */
+  --success:        var(--moss);      /* Mộc */
+  --on-success:     var(--paper);
+  --premium:        var(--brass);     /* Kim — rare */
+  --on-premium:     var(--ink);
+
+  /* ---- Focus ring (uses the hero spark) ---- */
+  --focus:          var(--ember);
+
+  /* ---- Industrial material vocabulary ----
+     The ngũ hành tones renamed for the warehouse/loft register
+     (exposed brick, raw concrete, iron, weathered wood, aged copper,
+     deep teal). Same hexes — a second naming layer designers recognise.
+     Colors to AVOID per the industrial register: soft pastels, candy
+     accents, anything that reads as a polished/decorative finish. */
+  --mat-brick:    var(--ember);      /* Exposed Brick / Rust Orange — the spark */
+  --mat-concrete: var(--cement);     /* Raw Concrete */
+  --mat-iron:     var(--ink);        /* Iron Black */
+  --mat-wood:     var(--plaster);    /* Weathered Wood */
+  --mat-copper:   var(--brass);      /* Aged Copper — rare premium */
+  --mat-teal:     var(--ink-slate);  /* Deep Teal — depth accent */
+}
+
+/* dark mode: flip the ground to ink, keep the same sparks */
+:root[data-theme="dark"] {
+  --bg:            #1F1F1F;
+  --surface:       #2A2826;
+  --surface-warm:  #3A352F;
+  --text:          #E8E4DD;
+  --text-muted:    #9A968E;
+  --border:        #3A3733;
+
+  --primary:       #A0522D;
+  --primary-hover: #8F4527;
+  --on-primary:    #E8E4DD;
+  --secondary:     #28323B;
+  --on-secondary:  #E8E4DD;
+  --link:          #C06A3D;   /* lifted ember for contrast on ink */
+  --success:       #7E8E6B;
+  --premium:       #B49C66;
+}

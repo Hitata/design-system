@@ -1,0 +1,35 @@
+<!-- @dsCard group="Colors" viewport="700x170" name="Dark mode — ground flips to ink" subtitle="Ground becomes ink; the sparks stay the same" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--bg); font-family: var(--font-mono); }
+  .stage { margin: 20px; border: var(--border-thick) solid var(--ink); }
+  .panel { background: #1F1F1F; padding: 22px 20px; }
+  .ey { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #9A968E; }
+  .h { font-family: var(--font-sans); font-weight: 800; font-size: 24px; color: #E8E4DD; margin: 8px 0 14px; }
+  .row { display: flex; gap: 8px; }
+  .chip { flex: 1; height: 26px; border: 1px solid #3A3733; }
+  .cta { display: inline-block; margin-top: 14px; background: #A0522D; color: #E8E4DD; padding: 8px 16px; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="panel">
+      <div class="ey">data-theme="dark"</div>
+      <div class="h">The flame gathers on ink.</div>
+      <div class="row">
+        <div class="chip" style="background:#2A2826"></div>
+        <div class="chip" style="background:#3A352F"></div>
+        <div class="chip" style="background:#A0522D"></div>
+        <div class="chip" style="background:#28323B"></div>
+        <div class="chip" style="background:#7E8E6B"></div>
+        <div class="chip" style="background:#B49C66"></div>
+      </div>
+      <span class="cta">Primary CTA</span>
+    </div>
+  </div>
+</body>
+</html>

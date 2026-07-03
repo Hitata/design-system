@@ -1,0 +1,50 @@
+/* ============================================================
+   TEXTURE / PATTERN — Đinh Hỏa system v1.1 (industrial)
+   ------------------------------------------------------------
+   Honest exposed-structure motifs, NOT decorative color gradients.
+   All are CSS-only (no image assets) and meant to be dropped onto
+   `background-image`. Keep them low-contrast and structural —
+   riveted metal, brick grid, mesh, conduit hatch, distressed wash.
+   Use sparingly: a panel reads as raw material, never as wallpaper.
+
+   Usage:
+     background-image: var(--tex-rivet);
+     background-size: var(--tex-rivet-size);
+   ============================================================ */
+
+:root {
+  /* Riveted metal — a tile of bolt heads */
+  --tex-rivet:      radial-gradient(circle at center,
+                      color-mix(in srgb, var(--ink) 55%, transparent) 0 1.1px,
+                      transparent 1.6px);
+  --tex-rivet-size: 18px 18px;
+
+  /* Brick grid — running-bond mortar lines (approx) */
+  --tex-grid:       repeating-linear-gradient(0deg,
+                      transparent 0 23px,
+                      color-mix(in srgb, var(--ink) 14%, transparent) 23px 24px),
+                    repeating-linear-gradient(90deg,
+                      transparent 0 47px,
+                      color-mix(in srgb, var(--ink) 14%, transparent) 47px 48px);
+
+  /* Wire mesh — fine crosshatch */
+  --tex-mesh:       repeating-linear-gradient(45deg,
+                      color-mix(in srgb, var(--ink) 12%, transparent) 0 1px,
+                      transparent 1px 9px),
+                    repeating-linear-gradient(-45deg,
+                      color-mix(in srgb, var(--ink) 12%, transparent) 0 1px,
+                      transparent 1px 9px);
+
+  /* Conduit hatch — vertical pipe striping */
+  --tex-conduit:    repeating-linear-gradient(90deg,
+                      color-mix(in srgb, var(--ink) 22%, transparent) 0 2px,
+                      transparent 2px 8px);
+
+  /* Distressed wash — diagonal worn scatter, very low contrast */
+  --tex-distress:   repeating-linear-gradient(20deg,
+                      color-mix(in srgb, var(--ink) 6%, transparent) 0 2px,
+                      transparent 2px 11px);
+
+  /* Bolt — single rivet head, for corner detailing */
+  --bolt-size:      7px;
+}

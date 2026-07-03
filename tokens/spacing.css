@@ -1,0 +1,43 @@
+/* ============================================================
+   SPACING / STRUCTURE — Đinh Hỏa system v1
+   ------------------------------------------------------------
+   The "exposed pipe" grid. 4px base unit. Borders are hairline
+   and honest; corners are mostly square (brutalist), with a
+   single small radius reserved for soft moments only.
+   No shadows by default — structure is shown, not faked.
+   ============================================================ */
+
+:root {
+  /* ---- Spacing scale (4px base) ---- */
+  --space-0:   0;
+  --space-1:   0.25rem;  /* 4px  */
+  --space-2:   0.5rem;   /* 8px  */
+  --space-3:   0.75rem;  /* 12px */
+  --space-4:   1rem;     /* 16px */
+  --space-5:   1.5rem;   /* 24px */
+  --space-6:   2rem;     /* 32px */
+  --space-8:   3rem;     /* 48px */
+  --space-10:  4rem;     /* 64px */
+  --space-12:  6rem;     /* 96px */
+  --space-16:  8rem;     /* 128px */
+
+  /* ---- Border / rule (exposed structure) ---- */
+  --border-hair:   1px;   /* default hairline rule */
+  --border-thick:  2px;   /* emphasis frame */
+  --border-heavy:  4px;   /* brutalist block frame */
+  --border-style:  solid;  /* @kind other */
+
+  /* ---- Radius — mostly square ---- */
+  --radius-none:  0;       /* default — honest corners */
+  --radius-sm:    2px;     /* the one soft moment */
+  --radius-pill:  999px;   /* tags / status dots only */
+
+  /* ---- Shadow — used almost never (raw over polished) ---- */
+  --shadow-none:  none;
+  --shadow-block: 4px 4px 0 0 var(--ink);  /* hard offset, no blur */
+
+  /* ---- Layout ---- */
+  --container:      72rem;   /* 1152px max content width */
+  --container-wide: 90rem;   /* 1440px */
+  --gutter:         var(--space-5);
+}

@@ -1,0 +1,49 @@
+/* ============================================================
+   TYPOGRAPHY — Đinh Hỏa system v1
+   ------------------------------------------------------------
+   Be Vietnam Pro (humanist grotesque) carries display + UI + body.
+   Newsreader (humanist serif) for editorial / long-read.
+   Space Mono for labels, code, and "exposed pipe" technical text.
+
+   Brutalist treatment: tight display tracking, heavy weights,
+   uppercase mono eyebrows/labels with positive letter-spacing.
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  --font-sans:    'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  --font-serif:   'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-mono:    'Space Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* ---- Weights ---- */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    900;
+
+  /* ---- Type scale (1.250 major-third, 16px base) ---- */
+  --text-xs:    0.75rem;   /* 12px — mono captions, legal */
+  --text-sm:    0.875rem;  /* 14px — meta, labels */
+  --text-base:  1rem;      /* 16px — body */
+  --text-md:    1.25rem;   /* 20px — lead / large body */
+  --text-lg:    1.563rem;  /* 25px — small heading */
+  --text-xl:    1.953rem;  /* 31px — heading */
+  --text-2xl:   2.441rem;  /* 39px — section title */
+  --text-3xl:   3.052rem;  /* 49px — page title */
+  --text-4xl:   3.815rem;  /* 61px — display */
+  --text-5xl:   4.768rem;  /* 76px — hero display */
+
+  /* ---- Line heights ---- */
+  --leading-tight:   1.04;  /* display — brutalist, near-solid */
+  --leading-snug:    1.18;  /* headings */
+  --leading-normal:  1.5;   /* body */
+  --leading-relaxed: 1.65;  /* long-form serif */
+
+  /* ---- Letter spacing ---- */
+  --tracking-tight:  -0.02em; /* large display */
+  --tracking-normal: 0;
+  --tracking-wide:   0.08em;  /* mono labels / eyebrows */
+  --tracking-wider:  0.16em;  /* uppercase tags */
+}

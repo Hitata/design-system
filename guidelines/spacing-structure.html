@@ -1,0 +1,26 @@
+<!-- @dsCard group="Spacing" viewport="700x190" name="Borders, radius & block shadow" subtitle="Honest corners, hairline rules, hard offset shadow" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-mono); }
+  .wrap { padding: 24px; display: flex; gap: 28px; align-items: center; }
+  .box { width: 96px; height: 70px; background: var(--surface-warm); display: flex; align-items: flex-end; }
+  .cap { font-size: 10px; color: var(--text-muted); padding: 4px; }
+  .hair { border: 1px solid var(--ink); }
+  .thick { border: 2px solid var(--ink); }
+  .heavy { border: 4px solid var(--ink); }
+  .blk { border: 1px solid var(--ink); box-shadow: 4px 4px 0 0 var(--ink); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div><div class="box hair"><span class="cap">1px hair</span></div></div>
+    <div><div class="box thick"><span class="cap">2px thick</span></div></div>
+    <div><div class="box heavy"><span class="cap">4px heavy</span></div></div>
+    <div><div class="box blk" style="background:var(--paper)"><span class="cap">block shadow</span></div></div>
+  </div>
+</body>
+</html>

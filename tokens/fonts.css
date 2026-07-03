@@ -1,0 +1,20 @@
+/* ============================================================
+   FONTS — webfont declarations
+   ------------------------------------------------------------
+   Pairing for the raw-industrial / brutalist direction:
+     • Be Vietnam Pro — humanist grotesque w/ full Vietnamese
+                        coverage. Display + UI + body. The primary face.
+     • Newsreader     — humanist serif. Editorial / long-read moments.
+     • Space Mono     — brutalist monospace. Labels, code, the "exposed pipe".
+
+   WHY Be Vietnam Pro: it is the face used by the downstream product
+   (bttb / darsana) and — critically — it carries proper Vietnamese
+   diacritics (Thổ, Hỏa, Thủy, Mộc, Kim), which the prior grotesque did
+   not. Full nine-weight family (100→900), so brutalist Black headlines
+   keep their heft. Italics available for emphasis.
+
+   Loaded from the Google CDN via @import; ship local @font-face binaries
+   for offline/production use.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');

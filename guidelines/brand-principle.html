@@ -1,0 +1,34 @@
+<!-- @dsCard group="Brand" viewport="700x210" name="One spark per view" subtitle="Ember leads; cement carries weight, not color" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-sans); }
+  .wrap { padding: 22px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .demo { border: 1px solid var(--ink); padding: 16px; background: var(--surface-warm); }
+  .demo h4 { margin: 0 0 10px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+  .demo p { margin: 0 0 12px; font-size: 13px; line-height: 1.4; }
+  .btn { display: inline-block; font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; padding: 7px 14px; }
+  .pri { background: var(--ember); color: var(--paper); border: 1px solid var(--ink); }
+  .ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); margin-left: 8px; }
+  .bad { border-color: var(--ember); }
+  .bad .btn:nth-child(2) { background: var(--moss); color: var(--paper); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="demo">
+      <h4>✓ One hero</h4>
+      <p>Ember acts; ink reads; everything else stays cement.</p>
+      <span class="btn pri">Act now</span><span class="btn ghost">Later</span>
+    </div>
+    <div class="demo bad">
+      <h4>✗ Two heroes competing</h4>
+      <p>Two filled accents and the eye has nowhere to land.</p>
+      <span class="btn pri">Act now</span><span class="btn">Also act</span>
+    </div>
+  </div>
+</body>
+</html>

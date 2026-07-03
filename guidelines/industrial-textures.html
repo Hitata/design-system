@@ -1,0 +1,31 @@
+<!-- @dsCard group="Texture" viewport="700x200" name="Material textures" subtitle="Honest CSS motifs — rivet, brick grid, mesh, conduit, distress" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--bg); font-family: var(--font-mono); }
+  .wrap { padding: 20px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border: 1px solid var(--ink); margin: 20px; }
+  .cell { border-right: 1px solid var(--ink); }
+  .cell:last-child { border-right: none; }
+  .tex { height: 92px; background-color: var(--surface-warm); }
+  .t1 { background-image: var(--tex-rivet); background-size: var(--tex-rivet-size); }
+  .t2 { background-image: var(--tex-grid); }
+  .t3 { background-image: var(--tex-mesh); }
+  .t4 { background-image: var(--tex-conduit); }
+  .t5 { background-image: var(--tex-distress); }
+  .lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text); padding: 7px 9px 2px; }
+  .tok { font-size: 9px; color: var(--text-muted); padding: 0 9px 9px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="cell"><div class="tex t1"></div><div class="lbl">Rivet</div><div class="tok">--tex-rivet</div></div>
+    <div class="cell"><div class="tex t2"></div><div class="lbl">Brick grid</div><div class="tok">--tex-grid</div></div>
+    <div class="cell"><div class="tex t3"></div><div class="lbl">Wire mesh</div><div class="tok">--tex-mesh</div></div>
+    <div class="cell"><div class="tex t4"></div><div class="lbl">Conduit</div><div class="tok">--tex-conduit</div></div>
+    <div class="cell"><div class="tex t5"></div><div class="lbl">Distress</div><div class="tok">--tex-distress</div></div>
+  </div>
+</body>
+</html>
