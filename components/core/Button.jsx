@@ -28,7 +28,7 @@ export function Button({
 
   const palette = {
     primary:   { bg: 'var(--primary)',   bgHover: 'var(--primary-hover)', fg: 'var(--on-primary)',   border: 'var(--border)' },
-    secondary: { bg: 'var(--secondary)', bgHover: '#1c252c',              fg: 'var(--on-secondary)', border: 'var(--border)' },
+    secondary: { bg: 'var(--secondary)', bgHover: 'var(--secondary-hover)', fg: 'var(--on-secondary)', border: 'var(--border)' },
     ghost:     { bg: 'transparent',      bgHover: 'var(--ink)',           fg: 'var(--text)',         border: 'var(--border)', fgHover: 'var(--bg)' },
     link:      { bg: 'transparent',      bgHover: 'transparent',          fg: 'var(--link)',         border: 'transparent' },
   };
@@ -42,9 +42,9 @@ export function Button({
     gap: '8px',
     width: full ? '100%' : 'auto',
     fontFamily: 'var(--font-mono)',
-    fontWeight: 700,
-    textTransform: 'uppercase',
-    letterSpacing: '0.08em',
+    fontWeight: 'var(--weight-bold)',
+    textTransform: 'var(--case-label)',
+    letterSpacing: 'var(--tracking-wide)',
     lineHeight: 1,
     border: `var(--border-hair) var(--border-style) ${p.border}`,
     borderRadius: 'var(--radius-none)',
@@ -56,8 +56,8 @@ export function Button({
     textUnderlineOffset: isLink ? '3px' : undefined,
     padding: isLink ? '0' : sizes[size].padding,
     fontSize: sizes[size].fontSize,
-    transform: active && !disabled && !isLink ? 'translate(1px, 1px)' : 'none',
-    transition: 'background 80ms linear, color 80ms linear, transform 60ms linear',
+    transform: active && !disabled && !isLink ? 'translate(var(--press-offset), var(--press-offset))' : 'none',
+    transition: 'background 80ms var(--ease-hard), color 80ms var(--ease-hard), transform 60ms var(--ease-hard)',
     ...style,
   };
 

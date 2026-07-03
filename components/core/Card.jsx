@@ -75,15 +75,15 @@ export function Card({
       ) : null}
       {eyebrow ? (
         <div style={{
-          fontFamily: 'var(--font-mono)', fontSize: '10px', fontWeight: 700,
-          textTransform: 'uppercase', letterSpacing: '0.14em',
+          fontFamily: 'var(--font-mono)', fontSize: '10px', fontWeight: 'var(--weight-bold)',
+          textTransform: 'var(--case-label)', letterSpacing: '0.14em',
           color: onInk ? 'rgba(232,228,221,0.7)' : 'var(--text-muted)',
           marginBottom: '8px',
         }}>{eyebrow}</div>
       ) : null}
       {title ? (
         <div style={{
-          fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'var(--text-lg)',
+          fontFamily: 'var(--font-display)', fontWeight: 'var(--weight-extrabold)', fontSize: 'var(--text-lg)',
           letterSpacing: '-0.01em', lineHeight: 'var(--leading-snug)', marginBottom: children ? '10px' : 0,
         }}>{title}</div>
       ) : null}

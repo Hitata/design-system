@@ -36,6 +36,12 @@
   --shadow-none:  none;
   --shadow-block: 4px 4px 0 0 var(--ink);  /* hard offset, no blur */
 
+  /* ---- Motion — brutalist: hard, near-instant ----
+     The "tell" is the easing, not the duration. Flip --ease-hard to a
+     cubic-bezier and set --press-offset to 0 to soften the mechanical feel. */
+  --ease-hard:     linear;   /* no easing flourish */
+  --press-offset:  1px;      /* active-state nudge on brutalist blocks */
+
   /* ---- Layout ---- */
   --container:      72rem;   /* 1152px max content width */
   --container-wide: 90rem;   /* 1440px */

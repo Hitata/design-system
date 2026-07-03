@@ -28,7 +28,7 @@ export function Input({
     borderRadius: 'var(--radius-none)',
     padding: '0 12px',
     boxShadow: focus ? '0 0 0 2px var(--focus)' : 'none',
-    transition: 'box-shadow 80ms linear',
+    transition: 'box-shadow 80ms var(--ease-hard)',
   };
 
   const input = {
@@ -48,8 +48,8 @@ export function Input({
     <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', ...style }}>
       {label ? (
         <label htmlFor={fieldId} style={{
-          fontFamily: 'var(--font-mono)', fontSize: '10px', fontWeight: 700,
-          textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--text-muted)',
+          fontFamily: 'var(--font-mono)', fontSize: '10px', fontWeight: 'var(--weight-bold)',
+          textTransform: 'var(--case-label)', letterSpacing: '0.12em', color: 'var(--text-muted)',
         }}>{label}</label>
       ) : null}
       <div style={frame}>

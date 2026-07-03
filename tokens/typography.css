@@ -21,6 +21,7 @@
   --weight-medium:   500;
   --weight-semibold: 600;
   --weight-bold:     700;
+  --weight-extrabold:800;
   --weight-black:    900;
 
   /* ---- Type scale (1.250 major-third, 16px base) ---- */
@@ -46,4 +47,9 @@
   --tracking-normal: 0;
   --tracking-wide:   0.08em;  /* mono labels / eyebrows */
   --tracking-wider:  0.16em;  /* uppercase tags */
+
+  /* ---- Case — the brutalist label lever ----
+     All labels/eyebrows/badges route through this. Flip to `none`
+     to drop ~90% of the brutalist "mono shout" in one edit. */
+  --case-label: uppercase;
 }

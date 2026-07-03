@@ -37,8 +37,8 @@ export function Callout({
     <div role="note" style={base} {...rest}>
       {title ? (
         <div style={{
-          fontFamily: 'var(--font-mono)', fontSize: '11px', fontWeight: 700,
-          textTransform: 'uppercase', letterSpacing: '0.1em', color: c, marginBottom: '6px',
+          fontFamily: 'var(--font-mono)', fontSize: '11px', fontWeight: 'var(--weight-bold)',
+          textTransform: 'var(--case-label)', letterSpacing: '0.1em', color: c, marginBottom: '6px',
         }}>{title}</div>
       ) : null}
       <div style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 'var(--leading-normal)' }}>

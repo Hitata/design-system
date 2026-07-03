@@ -38,7 +38,7 @@ export function Switch({
     borderRadius: 'var(--radius-none)',
     cursor: disabled ? 'not-allowed' : 'pointer',
     opacity: disabled ? 0.45 : 1,
-    transition: 'background 80ms linear',
+    transition: 'background 80ms var(--ease-hard)',
     padding: 0,
   };
 
@@ -49,7 +49,7 @@ export function Switch({
     width: '18px',
     height: '18px',
     background: 'var(--ink)',
-    transition: 'left 90ms linear',
+    transition: 'left 90ms var(--ease-hard)',
   };
 
   return (
@@ -72,8 +72,8 @@ export function Switch({
       </button>
       {label ? (
         <span style={{
-          fontFamily: 'var(--font-mono)', fontSize: '12px', fontWeight: 700,
-          textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--text)',
+          fontFamily: 'var(--font-mono)', fontSize: '12px', fontWeight: 'var(--weight-bold)',
+          textTransform: 'var(--case-label)', letterSpacing: 'var(--tracking-wide)', color: 'var(--text)',
         }}>{label}</span>
       ) : null}
     </label>
